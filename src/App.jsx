@@ -2,28 +2,40 @@ import { useState } from "react";
 
 function App() {
   const [idea, setIdea] = useState("");
+  const [result, setResult] = useState(null);
 
-  const handleSubmit = (e) => {
+  const validateIdea = (e) => {
     e.preventDefault();
 
-    console.log("Validating:", idea);
+    setResult({
+      customer: "Small business owners",
+      problem: "Difficulty validating business ideas before investing money",
+      mvp: [
+        "Idea input",
+        "AI analysis",
+        "Validation questions",
+        "Action plan",
+      ],
+      revenue: "Subscription",
+      risks: "Poor market demand",
+    });
   };
 
   return (
-    <div style={{ maxWidth: "800px", margin: "40px auto" }}>
-      <h1>Idea Validator</h1>
+    <div style={{ maxWidth: "900px", margin: "40px auto" }}>
+      <h1>🚀 Idea Validator</h1>
 
       <p>
-        Turn startup ideas into actionable business plans.
+        Transform startup ideas into actionable business plans.
       </p>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={validateIdea}>
         <textarea
           rows="6"
           style={{ width: "100%" }}
-          placeholder="Describe your startup idea..."
           value={idea}
           onChange={(e) => setIdea(e.target.value)}
+          placeholder="Describe your startup idea..."
         />
 
         <br />
@@ -33,6 +45,40 @@ function App() {
           Validate Idea
         </button>
       </form>
+
+      {result && (
+        <div style={{ marginTop: "30px" }}>
+          <h2>Analysis</h2>
+
+          <p>
+            <strong>Target Customer:</strong>{" "}
+            {result.customer}
+          </p>
+
+          <p>
+            <strong>Problem:</strong>{" "}
+            {result.problem}
+          </p>
+
+          <p>
+            <strong>Revenue Model:</strong>{" "}
+            {result.revenue}
+          </p>
+
+          <p>
+            <strong>Primary Risk:</strong>{" "}
+            {result.risks}
+          </p>
+
+          <h3>MVP Features</h3>
+
+          <ul>
+            {result.mvp.map((feature) => (
+              <li key={feature}>{feature}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
