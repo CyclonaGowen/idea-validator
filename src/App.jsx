@@ -27,6 +27,7 @@ function App() {
       ],
       revenue: "Freemium + Subscription",
       risks: "Market adoption and competition",
+      score: 78,
       questions: [
   "Who is the first customer most likely to use this?",
   "What problem are they already paying to solve?",

@@ -34,6 +34,10 @@ function IdeaResults({ result }) {
 
         <div style={summaryCard}>
           <h4>Primary Risk</h4>
+          <div style={summaryCard}>
+  <h4>Idea Score</h4>
+  <h2>{result.score}/100</h2>
+</div>
           <p>{result.risks}</p>
         </div>
       </div>
