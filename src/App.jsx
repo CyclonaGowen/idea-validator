@@ -8,6 +8,17 @@ function App() {
   const [result, setResult] = useState(null);
   const [user, setUser] = useState(null);
 
+  const generateScore = (idea) => {
+  let score = 50;
+
+  if (idea.length > 20) score += 10;
+  if (idea.includes("AI")) score += 10;
+  if (idea.includes("app")) score += 5;
+  if (idea.includes("marketplace")) score += 10;
+
+  return Math.min(score, 100);
+};
+
   const validateIdea = (e) => {
     e.preventDefault();
 
@@ -27,7 +38,8 @@ function App() {
       ],
       revenue: "Freemium + Subscription",
       risks: "Market adoption and competition",
-      score: 78,
+      score: generateScore(idea),
+      
       questions: [
   "Who is the first customer most likely to use this?",
   "What problem are they already paying to solve?",
@@ -45,6 +57,8 @@ actionPlan: [
 ],
     });
   };
+
+  
 
   return (
     <div style={{ maxWidth: "900px", margin: "40px auto" }}>
