@@ -1,16 +1,125 @@
-# React + Vite
+# 🚀 Idea Validator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Idea Validator is a web application designed to help entrepreneurs, builders, and innovators quickly evaluate startup ideas before investing significant time and money into development.
 
-Currently, two official plugins are available:
+Users can enter a business or application concept and receive structured feedback including target customers, key problems, MVP features, risks, validation questions, and a recommended action plan.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Problem
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Many founders spend months building products before validating whether customers actually need them.
 
-## Expanding the ESLint configuration
+Idea Validator helps users:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Identify their target audience
+- Clarify the problem being solved
+- Define a minimum viable product (MVP)
+- Evaluate potential risks
+- Create a validation strategy
+
+---
+
+## Features
+
+### Current Features
+
+- User registration
+- Idea submission form
+- Target customer analysis
+- Problem identification
+- MVP feature recommendations
+- Revenue model suggestions
+- Risk assessment
+- Validation questions
+- 7-Day action plan
+
+### Planned Features
+
+- OpenAI integration
+- Idea scoring engine
+- Startup readiness score
+- PDF export
+- Saved idea history
+- Dashboard analytics
+- Team collaboration
+- Market research integration
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- React
+- Vite
+- JavaScript
+
+### Development Tools
+
+- Git
+- GitHub
+- VS Code
+
+### Planned Integrations
+
+- OpenAI API
+- Supabase Authentication
+- Supabase Database
+
+---
+
+## Getting Started
+
+### Clone Repository
+
+```bash
+git clone https://github.com/CyclonaGowen/idea-validator.git
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## Project Structure
+
+```text
+src
+├── components
+│   ├── IdeaForm.jsx
+│   ├── IdeaResults.jsx
+│   └── RegisterForm.jsx
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## Future Vision
+
+The long-term goal of Idea Validator is to become an AI-powered startup co-pilot that helps founders move from idea to validation through structured guidance, customer discovery, and business planning.
+
+---
+
+## Author
+
+Cycalona Villani
+
+GitHub: https://github.com/CyclonaGowen
