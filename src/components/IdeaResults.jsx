@@ -22,6 +22,41 @@ function IdeaResults({ result }) {
       </p>
 
       <h3>MVP Features</h3>
+      <h3>Validation Questions</h3>
+<div>
+  {result.questions.map((question) => (
+    <div
+      key={question}
+      style={{
+        padding: "12px",
+        marginBottom: "10px",
+        border: "1px solid #ddd",
+        borderRadius: "8px",
+        backgroundColor: "#f9f9f9",
+      }}
+    >
+      {question}
+    </div>
+  ))}
+</div>
+
+<h3>7-Day Action Plan</h3>
+<div>
+  {result.actionPlan.map((step) => (
+    <div
+      key={step}
+      style={{
+        padding: "12px",
+        marginBottom: "10px",
+        border: "1px solid #ddd",
+        borderRadius: "8px",
+        backgroundColor: "#f9f9f9",
+      }}
+    >
+      {step}
+    </div>
+  ))}
+</div>
 
       <ul>
         {result.mvp.map((feature) => (
