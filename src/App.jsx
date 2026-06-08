@@ -5,21 +5,31 @@ function App() {
   const [result, setResult] = useState(null);
 
   const validateIdea = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    setResult({
-      customer: "Small business owners",
-      problem: "Difficulty validating business ideas before investing money",
-      mvp: [
-        "Idea input",
-        "AI analysis",
-        "Validation questions",
-        "Action plan",
-      ],
-      revenue: "Subscription",
-      risks: "Poor market demand",
-    });
-  };
+  if (!idea.trim()) {
+    alert("Please enter an idea.");
+    return;
+  }
+
+  setResult({
+    customer: `People interested in "${idea}"`,
+    problem: `Users currently lack an easy solution related to ${idea}.`,
+    mvp: [
+      "User registration",
+      "Idea dashboard",
+      "Validation scoring",
+      "Action plan generator",
+    ],
+    revenue: "Freemium + Subscription",
+    risks: "Market adoption and competition",
+    questions: [
+      "Who would pay for this?",
+      "How are users solving this today?",
+      "What makes this solution unique?",
+    ],
+  });
+};
 
   return (
     <div style={{ maxWidth: "900px", margin: "40px auto" }}>
@@ -70,7 +80,13 @@ function App() {
             {result.risks}
           </p>
 
-          <h3>MVP Features</h3>
+          <h3>Validation Questions</h3>
+
+<ul>
+  {result.questions.map((question) => (
+    <li key={question}>{question}</li>
+  ))}
+</ul>
 
           <ul>
             {result.mvp.map((feature) => (
